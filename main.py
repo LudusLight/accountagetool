@@ -2,7 +2,7 @@ import discord
 import sys
 import time
 
-bot = discord.Bot(debug_guilds=[895054114457780304])
+bot = discord.Bot()
 
 @bot.message_command(name="Show Account Age", description="Show the account age of this user")
 async def accountagemsg(ctx, message):
