@@ -12,7 +12,6 @@ async def accountagemsg(ctx, message):
 
 @bot.slash_command(description="Show the account age of a user")
 async def accountage(ctx, user : discord.User):
-    print(user)
     timestamp = user.created_at
     author = "<@"+str(user.id)+">"
     await ctx.respond("Creation date of "+author+" was <t:"+str(time.mktime(timestamp.timetuple()))[:-2]+":R>"+" on <t:"+str(time.mktime(timestamp.timetuple()))[:-2]+":d>", ephemeral=True)
